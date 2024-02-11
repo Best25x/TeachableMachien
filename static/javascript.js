@@ -12,7 +12,7 @@ This example uses p5 preload function to create the classifier
 // Classifier Variable
 let classifier;
 // Model URL
-let imageModelURL = 'https://teachablemachine.withgoogle.com/models/zkSfzjB2L/';
+let imageModelURL = 'https://teachablemachine.withgoogle.com/models/_Eur1TZt1/';
 
 // Video
 let vid;
@@ -77,13 +77,9 @@ function draw() {
         textSize(30);
         text("Your Webcam Feed",width/2,30);
 
-        fontSize(20);
-        let stringthing = player_score.toString()+"-"+computer_score.toString();
-        text(stringthing,width/2,height-10);
     }
     if (game_state === GAME_STATES.DETECT_CAMERA) {
         // Draw video
-        background(255);
         fill(0);
         rect((width/2)-(320/2),50,320,240);
         textSize(30);
@@ -97,9 +93,6 @@ function draw() {
         textAlign(CENTER);
         text(label, width/2, 50+240+20);
 
-        fontSize(20);
-        let stringthing = player_score.toString()+"-"+computer_score.toString();
-        text(stringthing,width/2,height-10);
     }
     if (game_state === GAME_STATES.SUBMIT_CAMERA) {
 
@@ -126,10 +119,6 @@ function draw() {
         textAlign(CENTER);
         text("Press [SPACE] to reveal \ncomputer move", width-(320/2), (240/2)+50);
 
-
-        fontSize(20);
-        let stringthing = player_score.toString()+"-"+computer_score.toString();
-        text(stringthing,width/2,height-10);
     }
     if (game_state === GAME_STATES.END_SCREEN) {
 
@@ -221,9 +210,6 @@ function draw() {
                 text("Wow! It's a tie! Press [SPACE] to play again!",width/2,height-25);
                 break;
 
-        fontSize(20);
-        let stringthing = player_score.toString()+"-"+computer_score.toString();
-        text(stringthing,width/2,height-10);
         }
     }
 
